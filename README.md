@@ -21,13 +21,22 @@ This project demonstrates a functional "Ground-to-Cloud" data integration using 
 3.  **Data Integrity:** Validated 100% success rate across 5+ data fields, ensuring zero data loss during the transformation lifecycle.
 4.  **Operational Monitoring:** Leveraged the IDMC Monitor service to analyze session logs, troubleshooting runtime performance and ensuring job success.
 
-## 📊 Results
+## Results
 * **Job Status:** Success
 * **Throughput:** 5/5 Rows Processed
 * **Log Level:** Verbose Initialization for granular debugging
 
-## 🔑 Key Skills Demonstrated
+## Key Skills Demonstrated
 * Cloud Data Integration (CDI)
 * Infrastructure Administration (Secure Agent Setup)
 * Hybrid Cloud Architecture
 * Data Validation & Troubleshooting
+
+* ## Technical Deep Dive: Execution Analysis
+To maintain transparency and demonstrate troubleshooting capabilities, the full execution log is available in the `/logs` directory.
+
+### Key Performance Metrics from Session Log:
+* **High Precision Processing:** Executed using HIGH precision mode to ensure 100% data accuracy for numeric and decimal metadata.
+* **Low-Latency Ingestion:** The data movement engine initialized and completed the load in <1 second (approx. 685ms), demonstrating the efficiency of the local Secure Agent.
+* **Commit Strategy:** Utilized a target-based commit interval of 10,000, adhering to enterprise-grade performance standards.
+* **Transformation Integrity:** The session completed with `0` transformation errors and `0` rejected rows.
