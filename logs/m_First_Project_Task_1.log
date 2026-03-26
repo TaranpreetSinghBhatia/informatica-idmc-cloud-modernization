@@ -1,0 +1,43 @@
+Agent Group Name: <SECURE_AGENT_GROUP>
+Agent Name: <SECURE_AGENT_NAME>
+Task Name: m_First_Project_Task
+Task Type: DTT
+Run Id: 1
+Started By: <USER_EMAIL>
+Run Context Type: ICS_UI
+
+03/25/2026 21:07:17 **** Importing Source Definition: customers_csv ...
+03/25/2026 21:07:17 **** Importing Target Definition: Final_Output_csv ...
+03/25/2026 21:07:17 **** Importing SessionConfig: default_session_config ...
+    Validating Source Definition  customers_csv...
+    Validating Target Definition  Final_Output_csv...
+03/25/2026 21:07:17 **** Importing Mapping: Mapping0 ...
+Validating transformations of mapping Mapping0...
+
+DIRECTOR> VAR_27085 [2026-03-25 21:07:18.463] Parameter file [<SECURE_AGENT_PATH>\data\parameters\s_mtt_task.param] is opened.
+DIRECTOR> TM_6014 [2026-03-25 21:07:18.467] Initializing session at [Wed Mar 25 21:07:18 2026].
+DIRECTOR> TM_6101 [2026-03-25 21:07:18.467] Mapping name: Mapping0.
+MANAGER> PETL_24001 [2026-03-25 21:07:19.654] Parallel Pipeline Engine running.
+MAPPING> TM_6155 [2026-03-25 21:07:19.662] Using HIGH precision processing.
+MAPPING> TM_6187 [2026-03-25 21:07:19.662] Session target-based commit interval is [10000].
+
+DIRECTOR> PETL_24006 [2026-03-25 21:07:20.142] Starting data movement.
+READER_1_1_1> DBG_21437 [2026-03-25 21:07:20.148] Reader: Source is a file-based source.
+WRITER_1_*_1> WRT_8124 [2026-03-25 21:07:20.166] Target Table Final_Output_csv :Writing output to: <TARGET_PATH>\Final_Output.csv
+READER_1_1_1> DBG_21430 [2026-03-25 21:07:20.169] Reading data from input source file: <SOURCE_PATH>\customers.csv
+READER_1_1_1> BLKR_16019 [2026-03-25 21:07:20.170] Read [5] rows for source table [customers_csv]
+
+LOAD SUMMARY
+================================================
+WRT_8036 Target: Final_Output_csv
+WRT_8038 Inserted rows - Requested: 5  Applied: 5  Rejected: 0  Affected: 5         
+
+DIRECTOR> PETL_24012 [2026-03-25 21:07:20.827] Session run completed successfully.
+
+SESSION LOAD SUMMARY
+================================================
+DIRECTOR> CMN_1740 [2026-03-25 21:07:20.829] Table: [Source] 
+	 Output Rows [5], Affected Rows [5], Applied Rows [5], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2026-03-25 21:07:20.829] Table: [Target] 
+	 Output Rows [5], Affected Rows [5], Applied Rows [5], Rejected Rows [0]
+================================================
